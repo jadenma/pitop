@@ -1,0 +1,16 @@
+from pitop import Pitop, Button, LED, UltrasonicSensor
+from time import sleep
+
+pitop = Pitop()
+screen = pitop.miniscreen
+dist_sensor = UltrasonicSensor(“D0”)
+btn = Button(“D1”)
+led_r = LED(“D2”)
+led_g = LED(“D3”)
+ready = False
+
+while not screen.cancel_button.is_pressed:
+   dist = dist_sensor.reading()
+   led_g.on()
+   if ready:
+      led_r.on()
