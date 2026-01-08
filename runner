@@ -1,7 +1,9 @@
+# imports
 from pitop import Pitop, Button, LED, UltrasonicSensor, Potentiometer
 from pitop.pma import ServoMotor, ServoMotorSetting
 from time import sleep
 
+# object initializations and variables
 pitop = Pitop()
 screen = pitop.miniscreen
 pot = Potentiometer("A2")
@@ -11,28 +13,40 @@ led_r = LED("D2")
 led_g = LED("D3")
 servo_settings = ServoMotorSetting()
 servo_settings.speed = 25
-#servo.target_angle = 0
+#servo.target_angle = 0 (code not needed for the time being)
 
+# permanent while loop
 while not screen.cancel_button.is_pressed:
     led_r.off()
     p = pot.position
     print(str(p))
     led_g.on()
-#    if (not servo.target_angle == 90):
+
+# need to add a way to make the launcher reset
+
+#    if (not servo.target_angle == 90): (code not needed for the time being)
 #        servo.target_angle = 90
 #        servo.sweep()
+
+#what happens if the potentiometer reading is in the bottom 1/3
     if (p < 333):
+        #displays the power level
         screen.display_text("Power: Weak")
+        #launches when the button is pressed
         if (btn.is_pressed):
             led_r.on()
             servo.target_angle = 30   #lowest setting
             servo.sweep()
+
+#what happens if the potentiometer reading is in the middle 1/3
     elif (p < 666):
         screen.display_text("Power: Medium")
         if (btn.is_pressed):
             led_r.on()
             servo.target_angle = 10
             servo.sweep()
+
+#what happens if the potentiometer reading is in the top 1/3
     else:
         screen.display_text("Power: Strong")
         if (btn.is_pressed):
