@@ -1,16 +1,44 @@
-from pitop import Pitop, Button, LED, UltrasonicSensor
+from pitop import Pitop, Button, LED, UltrasonicSensor, Potentiometer
+from pitop.pma import ServoMotor, ServoMotorSetting
 from time import sleep
 
 pitop = Pitop()
 screen = pitop.miniscreen
-dist_sensor = UltrasonicSensor(“D0”)
-btn = Button(“D1”)
-led_r = LED(“D2”)
-led_g = LED(“D3”)
-ready = False
+pot = Potentiometer("A2")
+servo = ServoMotor("S1")
+btn = Button("D1")
+led_r = LED("D2")
+led_g = LED("D3")
+servo_settings = ServoMotorSetting()
+servo_settings.speed = 25
+#servo.target_angle = 0
 
 while not screen.cancel_button.is_pressed:
-   dist = dist_sensor.reading()
-   led_g.on()
-   if ready:
-      led_r.on()
+    led_r.off()
+    p = pot.position
+    print(str(p))
+    led_g.on()
+#    if (not servo.target_angle == 90):
+#        servo.target_angle = 90
+#        servo.sweep()
+    if (p < 333):
+        screen.display_text("Power: Weak")
+        if (btn.is_pressed):
+            led_r.on()
+            servo.target_angle = 30   #lowest setting
+            servo.sweep()
+    elif (p < 666):
+        screen.display_text("Power: Medium")
+        if (btn.is_pressed):
+            led_r.on()
+            servo.target_angle = 10
+            servo.sweep()
+    else:
+        screen.display_text("Power: Strong")
+        if (btn.is_pressed):
+            led_r.on()
+            servo.target_angle = 0
+            servo.sweep()
+    
+    sleep(0.5)
+led_g.off()
