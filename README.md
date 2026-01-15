@@ -60,10 +60,6 @@ Initial prototypes of the catapult were built and tested incrementally. Tests me
 
 The final design is a servo-driven ball launcher with adjustable power controlled by a potentiometer and a push-button launch mechanism. The system meets all design criteria by providing safe, repeatable, and user-controlled launches suitable for educational demonstrations and experimental testing.
 
-### Portfolio Artifacts
-
-
-
 ### Reflection and Connection
 
 Designing and building the robotic ball launcher challenged me to think beyond making a device work and instead focus on making it reliable, repeatable, and safe. The most difficult aspect of the project was integrating the electronic controls with the mechanical system. Small changes in servo position or timing had a significant impact on launch consistency, which required systematic testing and iteration rather than trial-and-error.
