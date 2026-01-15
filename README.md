@@ -18,7 +18,7 @@ Many educational and testing environments require a consistent and controllable 
 * Materials: Computer (Python), Pi-top [4], 1x green LED, 1x red LED, 1x potentiometer, 1x button, 1x servo motor, 5x connecting wires, robot building metal components
 <img width="475" height="174" alt="Screenshot 2026-01-15 at 12 05 32 AM" src="https://github.com/user-attachments/assets/fabd7029-9c43-4cb6-85ed-6a3d78aafe02" />
 <img width="230" height="242" alt="Screenshot 2026-01-15 at 12 02 03 AM" src="https://github.com/user-attachments/assets/24c041b2-9c99-4303-8b3c-8ecbfa5e05f7" />
-![Uploading Screenshot 2026-01-15 at 12.07.38 AM.png…]()
+
 
 3. Background Research
 
@@ -31,7 +31,7 @@ Multiple launch mechanisms were considered, including flywheel systems and linea
 5. Circuit Generation
 
 A circuit was designed to safely integrate analog and digital inputs with the servo motor: Potentiometer wired as a voltage divider, Button configured with appropriate pull-down logic, Servo powered and controlled via PWM signal. Pin assignments and voltage limits were documented to prevent component damage.
-![Uploading ChatGPT Image Jan 15, 2026, 12_08_03 AM.png…]()
+
 
 6. Programming and Control Logic
 
