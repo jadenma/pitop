@@ -17,19 +17,21 @@ Many educational and testing environments require a consistent and controllable 
 * Constraints: Limited voltage and current from microcontroller, Servo torque and speed limitations, Available components and project timeline, Safety considerations for users and surroundings
 * Materials: Computer (Python), Pi-top [4], 1x green LED, 1x red LED, 1x potentiometer, 1x button, 1x servo motor, 5x connecting wires, robot building metal components
 
-Pi-top [4]: 
+#### Project Artifacts
+
+Pi-top [4] (Base pre-built raspberry pi that behaves like a mini computer - used in step 7, Prototyping and Testing): 
 
 <img width="475" height="174" alt="Screenshot 2026-01-15 at 12 05 32 AM" src="https://github.com/user-attachments/assets/fabd7029-9c43-4cb6-85ed-6a3d78aafe02" />
 
-Servo: 
+Servo (Controls mechanical arm that can rotate and swing the ping pong ball forward - used in step 6 and 7, programming/prototyping): 
 
 <img width="230" height="242" alt="Screenshot 2026-01-15 at 12 02 03 AM" src="https://github.com/user-attachments/assets/24c041b2-9c99-4303-8b3c-8ecbfa5e05f7" />
 
-LEDs: 
+LEDs (lights up as a signal for an event happening such as the ball being launched or the system running - used in step 6 and 7, programming/prototyping): 
 
 <img width="455" height="245" alt="Screenshot 2026-01-15 at 12 07 38 AM" src="https://github.com/user-attachments/assets/d347ec67-5261-4158-897c-ff34e3947206" />
 
-Potentiometer: 
+Potentiometer (Rotatable knob with values that range from 0-999 and creates a continuous range which can be used to adjust the power level - used in step 6 and 7, programming/prototyping): 
 
 <img width="321" height="308" alt="Screenshot 2026-01-15 at 12 12 25 AM" src="https://github.com/user-attachments/assets/bb20062f-67f3-41ee-a617-32a3a0695217" />
 
@@ -44,10 +46,11 @@ Multiple launch mechanisms were considered, including flywheel systems and linea
 5. Circuit Generation
 
 A circuit was designed to safely integrate analog and digital inputs with the servo motor: Potentiometer wired as a voltage divider, Button configured with appropriate pull-down logic, Servo powered and controlled via PWM signal. Pin assignments and voltage limits were documented to prevent component damage.
+<img width="832" height="483" alt="Screenshot 2026-01-15 at 12 29 27 AM" src="https://github.com/user-attachments/assets/d1b1347b-3bd2-4e0f-b537-84fb5e34a3f3" />
 
 6. Programming and Control Logic
 
-Initial prototypes were built on a breadboard and tested incrementally. Tests measured: Servo responsiveness, Consistency of launch distance at different power levels, Reliability of button activation. Issues such as inconsistent motion and timing errors were identified.
+Initial prototypes were built on a Pi-top and tested incrementally. Tests measured: Servo responsiveness, Consistency of launch distance at different power levels, Reliability of button activation. Issues such as inconsistent motion and timing errors were identified.
 
 7. Prototyping and Testing
 
@@ -56,3 +59,15 @@ Initial prototypes of the catapult were built and tested incrementally. Tests me
 8. Final Solution
 
 The final design is a servo-driven ball launcher with adjustable power controlled by a potentiometer and a push-button launch mechanism. The system meets all design criteria by providing safe, repeatable, and user-controlled launches suitable for educational demonstrations and experimental testing.
+
+### Portfolio Artifacts
+
+
+
+### Reflection and Connection
+
+Designing and building the robotic ball launcher challenged me to think beyond making a device work and instead focus on making it reliable, repeatable, and safe. The most difficult aspect of the project was integrating the electronic controls with the mechanical system. Small changes in servo position or timing had a significant impact on launch consistency, which required systematic testing and iteration rather than trial-and-error.
+
+This project strengthened my understanding of control systems, signal mapping, and system integration, particularly how analog inputs can be translated into precise mechanical motion. I also learned the importance of documenting design decisions and using data from testing to guide improvements, which is central to the engineering design process.
+
+The skills and mindset developed through this project directly connect to real-world engineering work, where systems must operate predictably under constraints. This experience has reinforced my interest in engineering fields that combine electronics, mechanics, and programming, and it has prepared me to approach future projects with a structured, analytical, and iterative design approach.
